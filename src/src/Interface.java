@@ -9,11 +9,10 @@ public class Interface {
 
             System.out.println("1. Opret bruger");
             System.out.println("2. Se/køb abonnementer");
-            System.out.println("3. top 5 list");
+            System.out.println("3.Passiv Medlemskab");
+            System.out.println("4. top 5 list");
             int enter = scanner.nextInt();
             scanner.nextLine();
-
-
 
         }
 
