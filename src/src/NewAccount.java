@@ -1,9 +1,11 @@
+import java.time.LocalDate;
+
 public class NewAccount {
     String name;
-    String birthdate;
+    LocalDate birthdate;
     boolean active;      //false = passiv, hvis man vil sætte sin konto på pause
 
-    NewAccount(String name, String birthdate, boolean active){
+    NewAccount(String name,LocalDate birthdate, boolean active){
         this.birthdate= birthdate;
         this.name= name;
         this.active= active;
