@@ -15,6 +15,12 @@ public class Interface {
             int enter = scanner.nextInt();
             scanner.nextLine();
 
+            switch (enter){
+                case 1:
+                    CreateAccount createAccount = new CreateAccount();
+                    createAccount.account();
+            }
+
         }
 
 
