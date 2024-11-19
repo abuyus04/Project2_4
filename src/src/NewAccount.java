@@ -1,20 +1,20 @@
+import java.lang.reflect.Array;
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class NewAccount {
     String name;
-    LocalDate birthdate;
-   // boolean active;      //false = passiv, hvis man vil sætte sin konto på pause
+    LocalDate birthday;
 
-    NewAccount(String name,LocalDate birthdate){
-        this.birthdate= birthdate;
-        this.name= name;
-        //this.active= active;
+    NewAccount(String name, LocalDate birthday){
+        this.birthday = birthday;
+        this.name = name;
     }
-
 
     @Override
     public String toString() {
-        return "Navn: "+ name + ","+ birthdate;
+        return "Navn:+"+name +","+ birthday;
     }
-}
 
+
+}
