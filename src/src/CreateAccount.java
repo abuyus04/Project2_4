@@ -4,16 +4,20 @@ import java.time.format.DateTimeParseException;
 import java.util.Scanner;
 
 //Ali
-public class CreateAccount {
+public class CreateAccount extends NewAccount {
     Scanner sc = new Scanner(System.in);
 
+    CreateAccount(String name, LocalDate birthdate) {
+        super(name, birthdate);
+    }
+
     public void account(){
-        System.out.println("Skriv dit navn");
+        System.out.println("Indtast navn");
         String name = sc.nextLine();
 
         LocalDate birthdate = null;
         while (birthdate == null){
-            System.out.println("Skriv dit fødselsdato");
+            System.out.println("Indtast fødselsdag");
             String birthdayInput = sc.nextLine();
 
             try{
@@ -23,6 +27,9 @@ public class CreateAccount {
             }
 
         }
+
+        NewAccount newAccount = new NewAccount(name,birthdate);
+        System.out.println(newAccount);
     }
 
 }
