@@ -50,10 +50,10 @@ public class Subscription extends NewAccountFile {
     }
 }
 
-public void main(String[] args) {
+/* public void main(String[] args) {
 
     Subscription subscription = new Subscription();
 
     subscription.registerSubscription();
 
-}
+} */

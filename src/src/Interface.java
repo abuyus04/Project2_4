@@ -8,24 +8,49 @@ public class Interface {
 
         while (true){
 
+            System.out.println("\n--- Delphin Menu ---");
             System.out.println("1. Opret bruger");
             System.out.println("2. Se/køb abonnementer");
             System.out.println("3.Passiv Medlemskab");
             System.out.println("4. top 5 list");
-            int enter = scanner.nextInt();
-            scanner.nextLine();
+            System.out.println("Vælg en mulighed (1-4): ");
+
+            String enter = scanner.nextLine().trim();
 
             switch (enter){
-                case 1:
+                case "1":
                     CreateAccount createAccount = new CreateAccount();
                     createAccount.account();
+                    menuHelper();
+                    break;
+
+                case "2":
+                    System.out.println("x");
+                    menuHelper();
+                    break;
+
+                case "3":
+                    System.out.println("x");
+                    menuHelper();
+                    break;
+
+                case "4":
+                    System.out.println("x");
+                    menuHelper();
+                    break;
+
+                default:
+                    System.out.println("ugyldigt valg prøv igen.");
+                    break;
             }
 
         }
-
-
-
-
+    }
+    public static void menuHelper () {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println();
+        System.out.println("Tryk på hvilken som helst knap for at forsætte");
+        scanner.nextLine();
     }
 }
 

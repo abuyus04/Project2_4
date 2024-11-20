@@ -3,7 +3,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public static class TopFive{ //extends NewAccount{
+public class TopFive{ //extends NewAccount{
 
 
     Scanner scanner = new Scanner(System.in);
@@ -35,10 +35,10 @@ public static class TopFive{ //extends NewAccount{
 
 }
 
-public static void main(String[] args) {
+/* public static void main(String[] args) {
 
     TopFive f = new TopFive();
 
     f.topFiveInput();
 
-}
+} */

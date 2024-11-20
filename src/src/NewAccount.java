@@ -13,6 +13,7 @@ public class NewAccount {
 
     @Override
     public String toString() {
+        System.out.println();
         return "Navn:+"+name +","+ birthday;
     }
 
