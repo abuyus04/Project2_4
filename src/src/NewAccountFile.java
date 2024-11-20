@@ -27,15 +27,24 @@ public class NewAccountFile {
                 PrintWriter printWriter = new PrintWriter(fileWriter);
 
 
+                System.out.println("----Opret medlemsskab----");
+                System.out.println("over 18: 1.600kr pr. år");
+                System.out.println("under 18: 1.000kr pr. år");
+                System.out.println("over 60 år 1.200kr pr. år");
+                System.out.println("passivt medlem 500kr pr. år");
+
+                System.out.println();
+
                 System.out.println("Indtast fulde navn:");
                 name = scanner.nextLine();
                 System.out.println("Indtast fødselsdato(åååå-MM-dd):");
                 birthDate = LocalDate.parse(scanner.nextLine(),formatter);
 
                 String membershipStatus = ActiveOrPassive();
+                int age = calculateAge();
 
 
-                printWriter.print("Navn: "+name+ ", Fødselsdato: "+birthDate+", Medlemsskab: "+membershipStatus);
+                printWriter.print("Navn: "+name+ ", Fødselsdato: "+birthDate+", Alder: "+age+", Medlemsskab: "+membershipStatus);
                 printWriter.println();
 
 
@@ -59,7 +68,7 @@ public class NewAccountFile {
     String ActiveOrPassive(){
 
         while (true) {
-            System.out.println("Har du Aktiv eller passiv medlemskab");
+            System.out.println("vil du oprette dig et aktivt eller passivt medlemskab");
             System.out.println("1. Aktiv");
             System.out.println("2. Passiv");
             memberShip = scanner.nextInt();
@@ -76,11 +85,20 @@ public class NewAccountFile {
         }
     }
 
+    int calculateAge(){
+        LocalDate currentDate = LocalDate.now();
+        return java.time.Period.between(birthDate, currentDate). getYears();
+        // beregner år imellem så du får alderen
+    }
+
 }
 
-//public void main(String[] args) {
-//
-//
-//    NewAccountFile n = new NewAccountFile();
-//    n.createAccount();
-//}
+/*
+public void main(String[] args) {
+
+
+    NewAccountFile n = new NewAccountFile();
+    n.createAccount();
+}
+*/
+

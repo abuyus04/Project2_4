@@ -1,3 +1,7 @@
-Navn: yosef, Fødselsdato: 2004-08-17, Medlemsskab: Passiv
-Navn: yasin, Fødselsdato: 2004-09-19, Medlemsskab: Passiv
-Navn: yosef, Fødselsdato: 2004-08-19, Medlemsskab: Aktiv
+Navn: habibi, Fødselsdato: 2004-08-20, Alder: 20, Medlemsskab: Aktiv
+Navn: albi, Fødselsdato: 2006-05-14, Alder: 18, Medlemsskab: Aktiv
+Navn: Adam, Fødselsdato: 2010-09-20, Alder: 14, Medlemsskab: Aktiv
+Navn: amo, Fødselsdato: 1960-04-24, Alder: 64, Medlemsskab: Aktiv
+Navn: fattig, Fødselsdato: 2004-04-23, Alder: 20, Medlemsskab: Passiv
+Navn: karim, Fødselsdato: 2007-05-24, Alder: 17, Medlemsskab: Passiv
+Navn: mohammed, Fødselsdato: 2004-03-23, Alder: 20, Medlemsskab: Aktiv
