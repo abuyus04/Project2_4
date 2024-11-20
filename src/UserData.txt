@@ -1,0 +1,3 @@
+Navn: yosef, Fødselsdato: 2004-08-17, Medlemsskab: Passiv
+Navn: yasin, Fødselsdato: 2004-09-19, Medlemsskab: Passiv
+Navn: yosef, Fødselsdato: 2004-08-19, Medlemsskab: Aktiv

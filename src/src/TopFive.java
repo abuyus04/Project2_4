@@ -3,7 +3,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public static class TopFive extends NewAccount{
+public static class TopFive{ //extends NewAccount{
 
 
     Scanner scanner = new Scanner(System.in);
@@ -19,8 +19,8 @@ public static class TopFive extends NewAccount{
         while (true){
 
             System.out.println("indtast navn");
-            super.name = enterName = scanner.nextLine();
-            members.add(enterName);
+//            super.name = enterName = scanner.nextLine();
+//            members.add(enterName);
             System.out.println("indtast alder");
 
 
