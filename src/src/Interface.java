@@ -1,74 +1,86 @@
 import java.util.Scanner;
-//passiv medlemskab er hvor du sætter det på pause
 
 public class Interface {
+
+    static CreateMember2 createMember2 = new CreateMember2();
+    static CreateCompetitiveSwimmers createCompetitiveSwimmers = new CreateCompetitiveSwimmers(createMember2);
+    static Scanner sc = new Scanner(System.in);
+
     public static void main(String[] args) {
-
-        Scanner scanner = new Scanner(System.in);
-
-        while (true){
-
-            System.out.println("\n--- Delphin Menu ---");
-            System.out.println("1. Opret bruger");
-            System.out.println("2. Se/køb abonnementer");
-            System.out.println("3.Passiv Medlemskab");
-            System.out.println("4. top 5 list");
-            System.out.println("Vælg en mulighed (1-4): ");
-
-            String enter = scanner.nextLine().trim();
-
-            switch (enter){
-                case "1":
-                    CreateAccount createAccount = new CreateAccount();
-                    createAccount.account();
-                    menuHelper();
+        while (true) {
+            System.out.println("Welcome to the main menu!\n" +
+                    "you have 5 options\n" +
+                    "1 = Create a member\n"
+                    + "2 = View all members\n"
+                    + "3 = View all paid or unpaid invoices\n" +
+                    "4 creating a competitive swimmer under 18\n" +
+                    "5 creating a competitive swimmer over 18\n" +
+                    "6 Creating a record for the a competetive swimmer\n" +
+                    "7 = View the best 5 records for all disciples");
+            int answer = 0;
+            answer = sc.nextInt();
+            switch (answer) {
+                case 1: {
+                    createMember2.createMember();
                     break;
-
-                case "2":
-                    System.out.println("x");
-                    menuHelper();
+                }
+                case 2: {
+                    createMember2.loadMembers();
+                    createMember2.printMemberList();
                     break;
-
-                case "3":
-                    System.out.println("x");
-                    menuHelper();
+                }
+                case 3: {
+                    createMember2.printInvoices();
                     break;
-
-                case "4":
-                    System.out.println("x");
-                    menuHelper();
+                }
+                case 4: {
+                    createCompetitiveSwimmers.createCompetitiveSwimmersu18();
                     break;
+                }
+                case 5: {
+                    createCompetitiveSwimmers.createCompetitiveSwimmerso18();
+                    break;
+                }
+                case 6: {
+                    System.out.println("is the member over 18 = 1 or under 18 = 2 ");
+                    int asw = sc.nextInt();
+                    if (asw == 1) {
+                        createCompetitiveSwimmers.creatingaRecordso18();
+                        break;
+                    } else if (asw == 2) {
+                        createCompetitiveSwimmers.creatingaRecordsu18();
+                        break;
+                    }
+                }
+
+                case 7: {
+                    System.out.println("You can see all the records here for tournaments or personal records\n" +
+                            "Under 18 personal records = 1\n" +
+                            "Under 18 Tournaments records = 2\n" +
+                            "Over 18 personal records = 3\n" +
+                            "Over 18 Tournaments records = 4\n");
+                    int asw = sc.nextInt();
+                    if (asw == 1) {
+                        createCompetitiveSwimmers.printingSortedlistTrainingu18();
+                        break;
+                    } else if (asw == 2) {
+                        createCompetitiveSwimmers.printingSortedlistTournamentu18();
+                        break;
+                    } else if (asw == 3) {
+                        createCompetitiveSwimmers.printingSortedlistTrainingo18();
+                        break;
+                    } else if (asw == 4) {
+                        createCompetitiveSwimmers.printingSortedlistTournamento18();
+                        break;
+                    }
+
+                }
 
                 default:
-                    System.out.println("ugyldigt valg prøv igen.");
-                    break;
+                    System.out.println("Wrong choice, try again!\n" +
+                            "Remember to use a number this time :) ");
             }
-
         }
-    }
-    public static void menuHelper () {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println();
-        System.out.println("Tryk på hvilken som helst knap for at forsætte");
-        scanner.nextLine();
+
     }
 }
-
-//Trin 1: Analyse og Planlægning
-//Vi skal finde ud af, hvad programmet skal kunne. Forestil dig, at programmet skal gøre dette:
-//
-//Registrere medlemmer:
-//
-//Når nogen melder sig ind, skal vi kunne skrive deres navn, alder, og hvilken type medlem de er (aktiv eller passiv).
-//Regne kontingentet ud:
-//
-//Programmet skal automatisk finde ud af, hvor meget et medlem skal betale baseret på deres alder og medlemsstatus.
-//Lave en liste over medlemmer, der ikke har betalt:
-//
-//Hvis nogen skylder penge, skal programmet vise dem på en liste, så klubben kan minde dem om det.
-//Registrere resultater for konkurrencesvømmere:
-//
-//Programmet skal holde styr på, hvilke discipliner (som crawl eller rygsvømning) de træner i, deres bedste tider, og hvordan de klarer sig i konkurrencer.
-//Lave top 5-lister:
-//
-//For hver disciplin skal programmet kunne vise de 5 bedste svømmere baseret på deres tider.
